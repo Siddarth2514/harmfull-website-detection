@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("/static/care.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #00ff00; /* Hacker-style green */
+}
+
+/* Make heading more readable */
+h1 {
+    background: rgba(0, 0, 0, 0.8); /* Darker for visibility */
+    padding: 15px;
+    border-radius: 10px;
+    color: #00ff00;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Improve paragraph and list visibility */
+p, ul {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #d4ffb8; /* Slightly brighter green for readability */
+}
+
+/* Style the list */
+ul {
+    list-style-type: square;
+}
+
+/* Improve link visibility */
+a {
+    color: #ffcc00; /* Bright yellow for visibility */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6600; /* Change color on hover */
+    text-decoration: underline;
+}

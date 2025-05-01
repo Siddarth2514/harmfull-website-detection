@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Threat Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='virus-style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">🔙 Back to Home</a>
+    </nav>
+    <h1>🔍 Real-time Threat Intelligence (Google Safe Browsing API)</h1>
+    <br>
+    <p>Enter a website URL to check for potential threats like malware, phishing, and other harmful activities.</p>
+    <br>
+    <form method="POST" action="/scan-url">
+        <input type="text" name="url" placeholder="Enter URL to scan..." required>
+        <button type="submit">Scan Now</button>
+    </form>
+    
+    {% if result %}
+    <div class="result-box">
+        <h2>Scan Results:</h2>
+        <p><strong>URL:</strong> {{ scanned_url }}</p>
+        <p><strong>Status:</strong> {{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

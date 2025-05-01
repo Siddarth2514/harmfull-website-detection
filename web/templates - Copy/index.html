@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harmful Website Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Harmful Website Detection</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter URL..." required>
+        <button type="submit">Check Website</button>
+    </form>
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+    <nav>
+        <a href="{{ url_for('info') }}" target="_blank">📌 Learn About Harmful Websites</a>
+        <a href="{{ url_for('scan_url_page') }}">🔍 Scan with Google Safe Browsing</a>
+        <a href="{{ url_for('security_dashboard') }}">📊 Security Dashboard</a>
+    </nav>
+</body>
+</html>

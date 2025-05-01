@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("/static/real.jpg"); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    text-align: left;
+    padding: 15px;
+}
+
+nav a {
+    color: #00ff00; /* Green color for a hacking-style theme */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+h1 {
+    background: rgba(0, 0, 0, 0.8);
+    padding:10px;
+    border-radius: 10px;
+    color: #00ff00;
+    display: inline-block;
+}
+
+p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #33ff33;
+}
+
+.result-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}

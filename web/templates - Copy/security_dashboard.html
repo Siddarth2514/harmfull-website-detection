@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Dashboard 📊</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard-style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">🔙 Back to Home</a>
+    </nav>
+    <h1>🔒 Security Dashboard 📊</h1>
+    
+    <div class="dashboard-container">
+        <div class="card">
+            <h2>🔍 Total Scans</h2>
+            <p>{{ scan_history | length }}</p>
+        </div>
+        <div class="card">
+            <h2>🛑 Malicious Websites</h2>
+            <p>{{ malicious_count }}</p>
+        </div>
+        <div class="card">
+            <h2>✅ Safe Websites</h2>
+            <p>{{ safe_count }}</p>
+        </div>
+    </div>
+
+    <h2>📜 Scan History</h2>
+    <table>
+        <tr>
+            <th>🔗 URL</th>
+            <th>📝 Verdict</th>
+        </tr>
+        {% for scan in scan_history %}
+        <tr>
+            <td>{{ scan.url }}</td>
+            <td>{{ scan.verdict }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <footer>
+        <p>Powered by Real-time Threat Intelligence API</p>
+    </footer>
+</body>
+</html>
