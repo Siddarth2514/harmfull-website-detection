@@ -5,3 +5,4 @@ numpy
 groq
 deep_translator
 gunicorn
+scikit-learn 
